@@ -16,8 +16,8 @@ export default function Navbar() {
       <ul className="hidden md:flex gap-8 text-lg font-medium">
         <li><a href="/" className="text-sky-700 hover:text-sky-500 transition-colors">Home</a></li>
         <li><a href="/about" className="text-sky-700 hover:text-sky-500 transition-colors">About</a></li>
-        <li><a href="/shorts" className="text-sky-700 hover:text-sky-500 transition-colors">Shorts</a></li>
         <li><a href="/podcast" className="text-sky-700 hover:text-sky-500 transition-colors">Podcast</a></li>
+        <li><a href="/shorts" className="text-sky-700 hover:text-sky-500 transition-colors">Shorts</a></li>
       </ul>
       {/* Mobile menu button */}
       <button
@@ -34,8 +34,8 @@ export default function Navbar() {
         <ul className="absolute top-full right-8 mt-2 bg-white shadow-lg rounded-lg flex flex-col gap-4 p-6 text-lg font-medium md:hidden z-50 border border-sky-100">
           <li><a href="/" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Home</a></li>
           <li><a href="/about" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>About</a></li>
-          <li><a href="/shorts" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Shorts</a></li>
           <li><a href="/podcast" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Podcast</a></li>
+          <li><a href="/shorts" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Shorts</a></li>
         </ul>
       )}
     </nav>

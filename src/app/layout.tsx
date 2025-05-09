@@ -25,9 +25,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar />
-        {children}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen relative`}
+        style={{
+          backgroundImage: 'url(/isl-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Overlay for readability */}
+        <div className="fixed inset-0 z-0" style={{background: 'linear-gradient(120deg, rgba(0,102,204,0.7) 0%, rgba(255,215,0,0.3) 50%, rgba(220,38,38,0.5) 100%)'}}></div>
+        <div className="relative z-10">
+          <Navbar />
+          <main className="backdrop-blur-sm bg-white/70 rounded-xl shadow-xl mx-auto my-4 p-2 md:p-8 max-w-7xl">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
