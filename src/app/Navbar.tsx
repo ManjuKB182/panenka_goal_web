@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,17 +9,17 @@ export default function Navbar() {
   return (
     <nav className="w-full flex items-center justify-between px-8 py-4 bg-white shadow-md mb-8 relative">
       <div className="flex items-center gap-3">
-        <a href="/">
-          <img src="/logo.png" alt="Panenka Logo" className="h-10 w-10 rounded-full hover:opacity-80 transition-opacity" />
-        </a>
+        <Link href="/">
+          <Image src="/logo.png" alt="Panenka Logo" width={40} height={40} className="rounded-full hover:opacity-80 transition-opacity" />
+        </Link>
         <span className="font-bold text-xl tracking-tight text-sky-600">Panenka Goal</span>
       </div>
       {/* Desktop nav */}
       <ul className="hidden md:flex gap-8 text-lg font-medium">
-        <li><a href="/" className="text-sky-700 hover:text-sky-500 transition-colors">Home</a></li>
-        <li><a href="/about" className="text-sky-700 hover:text-sky-500 transition-colors">About</a></li>
-        <li><a href="/podcast" className="text-sky-700 hover:text-sky-500 transition-colors">Podcast</a></li>
-        <li><a href="/shorts" className="text-sky-700 hover:text-sky-500 transition-colors">Shorts</a></li>
+        <li><Link href="/" className="text-sky-700 hover:text-sky-500 transition-colors">Home</Link></li>
+        <li><Link href="/about" className="text-sky-700 hover:text-sky-500 transition-colors">About</Link></li>
+        <li><Link href="/podcast" className="text-sky-700 hover:text-sky-500 transition-colors">Podcast</Link></li>
+        <li><Link href="/shorts" className="text-sky-700 hover:text-sky-500 transition-colors">Shorts</Link></li>
       </ul>
       {/* Mobile menu button */}
       <button
@@ -32,10 +34,10 @@ export default function Navbar() {
       {/* Mobile nav dropdown */}
       {menuOpen && (
         <ul className="absolute top-full right-8 mt-2 bg-white shadow-lg rounded-lg flex flex-col gap-4 p-6 text-lg font-medium md:hidden z-50 border border-sky-100">
-          <li><a href="/" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Home</a></li>
-          <li><a href="/about" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>About</a></li>
-          <li><a href="/podcast" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Podcast</a></li>
-          <li><a href="/shorts" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Shorts</a></li>
+          <li><Link href="/" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link href="/about" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>About</Link></li>
+          <li><Link href="/podcast" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Podcast</Link></li>
+          <li><Link href="/shorts" className="text-sky-700 hover:text-sky-500 transition-colors" onClick={() => setMenuOpen(false)}>Shorts</Link></li>
         </ul>
       )}
     </nav>

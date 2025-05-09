@@ -16,7 +16,7 @@ export default function Home() {
         <Image src="/logo.png" alt="Panenka Logo" width={60} height={60} className="rounded-full" />
         <h1 className="text-3xl font-bold text-sky-600">Panenka Goal</h1>
       </div>
-      <p className="text-xl font-semibold text-sky-700 mb-8 text-center">Dive into the best of Indian football: Highlights, stories, and moments from Karnataka's vibrant football scene!</p>
+      <p className="text-xl font-semibold text-sky-700 mb-8 text-center">Dive into the best of Indian football: Highlights, stories, and moments from Karnataka&apos;s vibrant football scene!</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {videos.map((id) => (
           <div key={id} className="aspect-video w-full rounded-lg overflow-hidden shadow-lg bg-white">
